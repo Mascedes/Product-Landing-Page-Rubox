@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&Rubik+Mono+One&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 75px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+  color: #fff000;
+  z-index: 3;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  margin-left: 10px;
+  width: 50px;
+}
+
+.logo h3 {
+  margin-left: 10px;
+}
+
+nav ul {
+  padding: 0px;
+}
+
+nav li {
+  display: inline;
+  list-style: none;
+}
+
+nav a {
+  font-weight: bold;
+  color: #fff000;
+  padding: 0px 40px;
+  text-decoration: none;
+}
+
+/* Content */
+
+.container {
+  margin: 0px auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.hero-logo {
+  width: 14vw;
+}
+
+.hero h1 {
+  margin: 0px;
+  font-size: 14vw;
+  text-shadow: 10px 5px yellow;
+  font-family: "Rubik Mono One", sans-serif;
+}
+
+.hero h2 {
+  margin: 0px;
+}
+
+.email {
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+  display: block;
+  width: 170px;
+  height: 30px;
+  box-shadow: 5px 5px 1px black;
+  border: 1px solid black;
+}
+
+.email:focus {
+  box-shadow: 3px 3px 1px black;
+  border: 1px solid black;
+}
+
+.tombol {
+  width: 100px;
+  height: 40px;
+  background-color: yellow;
+  border: 1px solid;
+  color: black;
+  font-size: 1em;
+  font-family: "Rubik", sans-serif;
+  box-shadow: 5px 5px 1px black;
+}
+
+.tombol:active {
+  box-shadow: 2px 2px 1px black;
+}
+
+.video {
+  margin: 30px;
+}
+
+/* Features */
+
+.fitur-grup {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.fitur {
+  border: 1px solid;
+  margin: 5px;
+  padding: 20px;
+  text-align: center;
+  background-color: yellow;
+  box-shadow: 5px 5px 1px black;
+  border-radius: 2em;
+  width: 170px;
+  transition: all 500ms;
+  cursor: pointer;
+}
+
+.fitur:hover {
+  position: relative;
+  z-index: 2;
+  transform: scale(1.1);
+}
+
+.fitur i {
+  font-size: 2em;
+}
+
+/* Produk*/
+
+/* Style the Image Used to Trigger the Modal */
+.produk-grup {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.produk-grup img {
+  width: 400px;
+  margin: 10px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 1px black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.produk-grup img:hover {
+  transform: scale(1.1);
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 4; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/* Pricing */
+.card-grup {
+  margin: 0px auto 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: yellow;
+  overflow: hidden;
+  margin: 10px;
+  width: 250px;
+  box-shadow: 5px 5px 1px black;
+}
+
+.card:nth-child(2) {
+  transform: scale(1.1);
+}
+
+.card .card-header {
+  height: 150px;
+  background-color: white;
+}
+
+.card .card-header img {
+  height: 150px;
+  width: 250px;
+}
+
+.card .content {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.tombol-card {
+  margin-bottom: 20px;
+  height: 25px;
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: white;
+  box-shadow: 3px 3px 1px black;
+}
+
+.tombol-card:active {
+  box-shadow: 1px 1px 1px black;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding-top: 10px;
+  background-color: black;
+  text-align: center;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer li {
+  padding: 0 10px;
+}
+
+footer li a {
+  font-size: 2em;
+  color: white;
+}
+
+/* Mobile Screen */
+
+@media screen and (min-width: 580px) {
+  nav a:hover {
+    background-color: #fff000;
+    color: black;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  header {
+    position: relative;
+    background-image: url(https://i.ibb.co/wQgfF4S/header.jpg);
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    min-height: 100px;
+    padding: 0px;
+    flex-direction: column;
+  }
+
+  #hero {
+    margin-top: 30px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  nav {
+    position: absolute;
+    top: 75px;
+    background-color: #fff000;
+    border-radius: 20px;
+  }
+
+  nav li {
+    margin: 0px 30px;
+  }
+
+  nav a {
+    font-weight: unset;
+    color: black;
+    padding: 0px;
+  }
+
+  #video {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .card:nth-child(2) {
+    transform: scale(1);
+  }
+}
